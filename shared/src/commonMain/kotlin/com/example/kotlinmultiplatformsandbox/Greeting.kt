@@ -1,5 +1,6 @@
 package com.example.kotlinmultiplatformsandbox
 
+import daysPhrase
 import kotlin.random.Random
 
 class Greeting {
@@ -7,6 +8,7 @@ class Greeting {
 
     fun greet(): List<String> = buildList {
         add(if (Random.nextBoolean()) "Hi!" else "Hello!")
-        add("Guess what this is! > ${platform.name.reversed()}!")
+        add("Guess what it is! > ${platform.name.reversed()}!")
+        add(daysPhrase())
     }
 }
